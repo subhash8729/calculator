@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css" class="css">
+</head>
+
+<body>
+    <div class="page content-center">
+        <div class="main">
+            <div class="input">
+                <input class="inputvalue" placeholder="input value" type="">
+            </div>
+            <div class="buttonsdiv">
+                <div class="numberbutton">
+
+                    <div class="buttons">
+                        <button class="btn2" onclick="clear1()">AC</button>
+                        <button class="btn2" onclick="back()">back</button>
+                        <button class="btn2" onclick="buttonclick('%') ;oprtr('%')">%</button>
+                        <button class="btn1" onclick="buttonclick('/'); oprtr('/')">/</button>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn" onclick="buttonclick('7')">7</button>
+                        <button class="btn" onclick="buttonclick('8')">8</button>
+                        <button class="btn" onclick="buttonclick('9')">9</button>
+                        <button class="btn1" onclick="buttonclick('*'); oprtr('x')">X</button>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn" onclick="buttonclick('4')">4</button>
+                        <button class="btn" onclick="buttonclick('5')">5</button>
+                        <button class="btn" onclick="buttonclick('6')">6</button>
+                        <button class="btn1" onclick="buttonclick('-'); oprtr('-')">-</button>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn" onclick="buttonclick('1')">1</button>
+                        <button class="btn" onclick="buttonclick('2')">2</button>
+                        <button class="btn" onclick="buttonclick('3')">3</button>
+                        <button class="btn1" onclick="buttonclick('+'); oprtr('+')">+</button>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn" onclick="buttonclick('0')">0</button>
+                        <button class="btn" onclick="buttonclick('00')">00</button>
+                        <button class="btn" onclick="buttonclick('.')">.</button>
+                        <button class="btn1" onclick=" displayRes()">=</button>
+                    </div>
+                </div>
+                <div class="operatorbutton">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js">
+
+    </script>
+    <script type="module">
+    import { evaluate } from "https://esm.sh/mathjs"
+
+    const inputValue = document.querySelector(".inputvalue");
+
+    // Make the function accessible to inline onclick
+    window.displayRes = function () {
+    try{
+    const answer = evaluate(inputValue.value);
+    inputValue.value = answer;
+    }
+    catch{
+        inputValue.value = "Error";
+        console.log("error");
+    }
+    }
+  </script>
+</body>
+
+</html>
