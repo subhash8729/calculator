@@ -1,0 +1,77 @@
+body,html{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.content-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page{
+    width: 100%;
+    height: 100%;
+    background-color: wheat;
+}
+.main{
+    width: 250px;
+    height: 400px;
+    background-color: black;
+    border-radius: 20px;
+    padding: 20px;
+}
+.input{
+    width: 100%;
+    height: 80px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.inputvalue{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    text-align: right;
+    padding:10px;
+    
+}
+.buttons{
+    width: 100%;
+    height: 60px;
+    
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+button{
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    border: none;
+    background-color: rgb(86, 86, 86);
+    color: white;
+    font-size:medium; 
+    font-weight: bolder;
+
+
+}
+button:hover{
+    background-color: rgb(235, 82, 82);
+}
+button:active{
+    background-color: aqua;
+}
+
+
+.btn1{
+    background-color: orange;
+}
+.btn2{
+    background-color: rgb(50, 57, 89);
+}
